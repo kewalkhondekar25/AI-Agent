@@ -1,0 +1,29 @@
+{
+  "name": "ai-agent",
+  "version": "1.0.0",
+  "description": "Building AI Agent from scratch",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "AI",
+    "OpenAI",
+    "Agents",
+    "Function",
+    "calling",
+    "Agent",
+    "Loops",
+    "Real",
+    "Tools"
+  ],
+  "author": "Kewal Khondekar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2"
+  }
+}
