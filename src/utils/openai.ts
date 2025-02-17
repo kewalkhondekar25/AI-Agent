@@ -1,15 +1,13 @@
 import { OpenAI } from "openai";
 
-let openAIClientType: OpenAI | null = null;
+const globalForOpenAI = global as unknown as { openai?: OpenAI };
 
-const OpenAIClient = () => {
-  if(!openAIClientType){
-    openAIClientType = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY
-    });
-  };
-  return openAIClientType;
-};
+const openai = globalForOpenAI.openai ?? new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+});
 
+if (!globalForOpenAI.openai) {
+  globalForOpenAI.openai = openai;
+}
 
-export default OpenAIClient;
+export { openai };
