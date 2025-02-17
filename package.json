@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Building AI Agent from scratch",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "dev": "npx tsx src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
@@ -23,8 +24,11 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.7",
+    "lowdb": "^7.0.1",
     "nodemon": "^3.1.9",
     "openai": "^4.85.1",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "uuid": "^11.0.5"
   }
 }
