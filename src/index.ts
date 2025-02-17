@@ -2,10 +2,11 @@ import dotenv from "dotenv";
 dotenv.config({ path: ".env"});
 import { chatCompletion } from "./controllers/chat.controller";
 
-console.log("Building AI Agent From Scratch");
+const prompt = process.argv[2];
 
 const main = async () => {
-  const output = await chatCompletion("hi");
+  console.log("Building AI Agent From Scratch: ");
+  const output = await chatCompletion(prompt);
   console.log(output);
 };
 
